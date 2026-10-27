@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <h1 class="text-4xl text-center py-6 text-white bg-gray-900 font-semibold">
+      Number Guessing Game
+    </h1>
+
+    
+    <div id="firstUI" class="flex mx-auto mt-10 flex-col items-center md:max-w-[423px] w-[380px] bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+      <p class="text-2xl font-semibold text-gray-900">Welcome Player One</p>
+      <p class="mt-2 text-sm text-gray-900/90 text-center">আপনার নাম দিন</p>
+
+      <div class="w-full">
+        <input id="firstPlayerName" class="w-full max-w-80 mx-auto block border mt-4 mb-4 border-gray-500/30 outline-none rounded py-2.5 px-5" type="text" placeholder="Enter Your Name" />
+      </div>
+
+      <button id="firstPlayerNameBtn" type="button" class="mt-4 w-full max-w-80 h-11 rounded-full text-white text-sm bg-indigo-500 hover:opacity-90 transition-opacity">
+        Submit Name
+      </button>
+    </div>
+
+   
+    <div id="secondUI" class="hidden flex mx-auto mt-10 flex-col items-center md:max-w-[423px] w-[380px] bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+      <p id="firstTitle" class="text-2xl font-semibold text-gray-900"></p>
+      <p class="mt-2 text-sm text-gray-900/90 text-center">একটি গোপন নম্বর সেট করুন (১ - ১০০)</p>
+
+      <div class="w-full">
+        <input id="firstPlayerNumber" class="w-full max-w-80 mx-auto block border mt-4 mb-4 border-gray-500/30 outline-none rounded py-2.5 px-5" type="number" placeholder="Enter Secret Number" />
+      </div>
+
+      <button id="firstPlayerNumberBtn" type="button" class="mt-4 w-full max-w-80 h-11 rounded-full text-white text-sm bg-indigo-500 hover:opacity-90 transition-opacity">
+        Set Number
+      </button>
+    </div>
+
+    
+    <div id="thirdUI" class="hidden flex mx-auto mt-10 flex-col items-center md:max-w-[423px] w-[380px] bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+      <p class="text-2xl font-semibold text-gray-900">Welcome Player Two</p>
+      <p class="mt-2 text-sm text-gray-900/90 text-center">আপনার নাম এবং অনুমানকৃত নম্বরটি দিন</p>
+
+      <div class="w-full space-y-3 mt-4 mb-4">
+        <input id="secondPlayerName" class="w-full max-w-80 mx-auto block border border-gray-500/30 outline-none rounded py-2.5 px-5" type="text" placeholder="Enter Player Two Name" />
+        <input id="secondPlayerGuess" class="w-full max-w-80 mx-auto block border border-gray-500/30 outline-none rounded py-2.5 px-5" type="number" placeholder="Guess the Number" />
+      </div>
+
+      <button id="secondPlayerBtn" type="button" class="mt-4 w-full max-w-80 h-11 rounded-full text-white text-sm bg-indigo-500 hover:opacity-90 transition-opacity">
+        Submit Guess
+      </button>
+    </div>
+
+   
+    <div id="resultUI" class="hidden flex mx-auto mt-10 flex-col items-center md:max-w-[423px] w-[380px] bg-white rounded-2xl shadow-lg p-6 sm:p-10 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Game Result</h2>
+      <p id="resultMessage" class="text-xl font-medium text-indigo-600 mb-6"></p>
+      <button onclick="location.reload()" class="w-full max-w-80 h-11 rounded-full text-white text-sm bg-gray-900 hover:opacity-90 transition-opacity">
+        Play Again
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
